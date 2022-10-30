@@ -195,6 +195,10 @@ body {
   color: hsl(236, 13%, 42%);
 }
 
+.hamburger-menu {
+  display: none;
+}
+
 .attribution {
   font-family: Inter;
   font-size: 0.78rem;
@@ -245,7 +249,6 @@ body {
     gap: 0;
   }
 
-  /* page image */
   .page-image-wrapper {
     grid-column: 1;
     height: 27.2rem;
@@ -332,5 +335,48 @@ body {
     margin-top: 1rem;
     font-size: 1.38rem;
     line-height: 2.3rem;
+  }
+
+  .hamburger-menu {
+    display: block;
+    transform: translateX(60vw);
+    opacity: 0;
+    width: 68vw;
+    height: 100vh;
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    background: hsl(36, 100%, 99%);
+    padding: 2.5rem 1.8rem 0 2rem;
+  }
+
+  .hamburger-menu-active {
+    transition: all .3s linear;
+    transform: translateX(0px);
+    opacity: 1;
+  }
+
+  .close-icon-wrapper {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .close-icon {
+    width: 3rem;
+  }
+
+  .hamburger-links-wrapper {
+    margin-top: 7.9rem;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .hamburger-link {
+    text-decoration: none;
+    font-size: 1.65rem;
+    color: hsl(236, 13%, 42%);
+    margin-bottom: 2.35rem;
   }
 }
